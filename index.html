@@ -55,6 +55,8 @@
       <nav>
         <ul class="nav-list">
           <li><a href="#services">Services</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#additional">Extras</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact" class="nav-cta">Message Us</a></li>
@@ -107,6 +109,142 @@
     </div>
   </section>
 
+    <!-- ===== PACKAGES ===== -->
+  <section class="section section-alt" id="packages">
+    <div class="container">
+      <p class="section-label">Packages</p>
+      <h2 class="section-title">Curated Packages</h2>
+      <p class="section-sub">
+        Thoughtfully bundled services for every kind of celebration. Custom quotes available.
+      </p>
+
+      <div class="grid grid-3 package-grid">
+
+        <!-- PACKAGE 1 -->
+        <article class="package-card">
+          <p class="package-tier">Essential</p>
+          <h3 class="package-name">Intimate Gathering</h3>
+          <p class="package-price">
+            <span class="price-from">From</span> $000
+          </p>
+          <p class="package-desc">Perfect for showers, small birthdays, and intimate celebrations.</p>
+          <ul class="package-includes">
+            <li>Tables &amp; chairs for up to 30 guests</li>
+            <li>Basic linens &amp; table settings</li>
+            <li>Delivery &amp; setup</li>
+            <li>Takedown &amp; cleanup</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost package-btn">Request Quote</a>
+        </article>
+
+        <!-- PACKAGE 2 (featured) -->
+        <article class="package-card package-featured">
+          <span class="package-badge">Most Popular</span>
+          <p class="package-tier">Signature</p>
+          <h3 class="package-name">Classic Celebration</h3>
+          <p class="package-price">
+            <span class="price-from">From</span> $000
+          </p>
+          <p class="package-desc">Our most-booked package — ideal for weddings and milestone events.</p>
+          <ul class="package-includes">
+            <li>Tables &amp; chairs for up to 100 guests</li>
+            <li>Premium linens &amp; decor accents</li>
+            <li>Tent, lighting &amp; staging</li>
+            <li>Delivery, setup, takedown</li>
+            <li>Day-of coordination (4 hrs)</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary package-btn">Request Quote</a>
+        </article>
+
+        <!-- PACKAGE 3 -->
+        <article class="package-card">
+          <p class="package-tier">Premier</p>
+          <h3 class="package-name">Full-Service Event</h3>
+          <p class="package-price">
+            <span class="price-from">From</span> $000
+          </p>
+          <p class="package-desc">End-to-end planning and rentals for a completely stress-free day.</p>
+          <ul class="package-includes">
+            <li>Unlimited guest capacity</li>
+            <li>Custom decor &amp; styling</li>
+            <li>Full vendor coordination</li>
+            <li>Complete setup &amp; teardown</li>
+            <li>Dedicated on-site coordinator</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost package-btn">Request Quote</a>
+        </article>
+
+      </div>
+
+      <p class="package-note">
+        All packages are fully customizable — tell us your vision and we'll build a quote around it.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== ADDITIONAL SERVICES ===== -->
+  <section class="section" id="additional">
+    <div class="container">
+      <p class="section-label">Extras</p>
+      <h2 class="section-title">Additional Services</h2>
+      <p class="section-sub">
+        Add-ons to elevate any package — mix and match to fit your event.
+      </p>
+
+      <div class="grid grid-2 extras-grid">
+
+        <article class="extra-item">
+          <span class="extra-icon">✦</span>
+          <div>
+            <h3>Tent &amp; Canopy Rentals</h3>
+            <p>Weather-proof coverage in a range of sizes and styles.</p>
+          </div>
+        </article>
+
+        <article class="extra-item">
+          <span class="extra-icon">✦</span>
+          <div>
+            <h3>Lighting &amp; Ambience</h3>
+            <p>String lights, uplighting, and chandeliers to set the mood.</p>
+          </div>
+        </article>
+
+        <article class="extra-item">
+          <span class="extra-icon">✦</span>
+          <div>
+            <h3>Linens &amp; Chair Covers</h3>
+            <p>Premium fabrics and colors to match your palette.</p>
+          </div>
+        </article>
+
+        <article class="extra-item">
+          <span class="extra-icon">✦</span>
+          <div>
+            <h3>Centerpieces &amp; Decor</h3>
+            <p>Curated florals, candle setups, and table accents.</p>
+          </div>
+        </article>
+
+        <article class="extra-item">
+          <span class="extra-icon">✦</span>
+          <div>
+            <h3>Dance Floor &amp; Staging</h3>
+            <p>Portable dance floors, stages, and backdrops.</p>
+          </div>
+        </article>
+
+        <article class="extra-item">
+          <span class="extra-icon">✦</span>
+          <div>
+            <h3>Day-Of Coordination</h3>
+            <p>On-site support to keep your timeline running smoothly.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ===== VIDEO SHOWCASE ===== -->
   <section class="section section-alt" id="gallery">
     <div class="container">
@@ -116,9 +254,11 @@
 
       <div class="grid grid-3 video-grid">
         <!-- REPLACE each placeholder with a <video> block — see notes below -->
-        <div class="video-item" data-video="videos/event-1.mp4">
-          <span class="play-icon">▶</span>
-          <span class="video-label">Video 1</span>
+        <div class="video-item">
+          <video controls playsinline preload="metadata" poster="videos/event-1-poster.jpg">
+          <source src="videos/event-1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
         </div>
         <div class="video-item" data-video="videos/event-2.mp4">
           <span class="play-icon">▶</span>
