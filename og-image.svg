@@ -24,7 +24,7 @@
   <rect width="1200" height="630" fill="url(#bg)"/>
 
   <!-- LOCAL IMAGE PATH -->
-  <image href="images/og-photo.jpg"
+  <image href="images/og-image.jpg"
          x="480" y="0" width="720" height="630"
          preserveAspectRatio="xMaxYMid slice"
          clip-path="url(#photoClip)"/>
