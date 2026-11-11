@@ -495,8 +495,7 @@ em { font-style: italic; color: var(--gold-deep); }
   color: var(--charcoal);
 }
 /* ===== Package pricing (with slashed price) ===== */
-.package-price
-{
+.package-price {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -547,17 +546,6 @@ em { font-style: italic; color: var(--gold-deep); }
   padding: 4px 14px;
   border-radius: 999px;
   margin: 0 auto 18px;
-}
-
-.price-from {
-  font-family: 'Jost', sans-serif;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--muted);
-  font-weight: 400;
-  vertical-align: middle;
-  margin-right: 4px;
 }
 .package-desc {
   font-size: 0.9rem;
