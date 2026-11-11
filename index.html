@@ -174,7 +174,7 @@
             <li>Day-of coordination (7 hrs)</li>
             <li>All Services!!!</li>
           </ul>
-          <a href="#contact" class="btn btn-primary package-btn">Buy Now</a>
+          <a href="#contact" class="btn btn-primary package-btn">Reserve Now</a>
         </article>
 
         <!-- PACKAGE 3 -->
@@ -345,7 +345,7 @@
 
           <!-- PHOTO 6 -->
           <figure class="album-photo">
-            <img src="images/photo-6.jfif" alt="Table setting at a DFW wedding reception">
+            <img src="images/photo-6.jpg" alt="Table setting at a DFW wedding reception">
             <figcaption>Celebration moment</figcaption>
           </figure>
 
@@ -390,6 +390,7 @@
   </section>
 
   <!-- ===== MEET YOUR AGENT ===== -->
+    <!-- ===== MEET YOUR AGENT ===== -->
   <section class="section" id="team">
     <div class="container">
       <p class="section-label">Your Point of Contact</p>
@@ -398,26 +399,52 @@
         One person, start to finish — so nothing gets lost in the handoff.
       </p>
 
-      <article class="agent-card">
-        <div class="agent-photo">
-          <!-- Replace with: <img src="images/agent.jpg" alt="Jane Doe, Client Relations Specialist"> -->
-           <img src="https://i.pinimg.com/1200x/42/e2/ab/42e2ab5bec000a34a6800917b5cfa52c.jpg" alt="Aubrey Ocampo, Client Relations Specialist">
-        </div>
-        <div class="agent-info">
-          <h3>Aubrey Ocampo</h3>
+      <div class="agent-layout">
+
+        <!-- LEFT: Photo + name -->
+        <div class="agent-primary">
+          <div class="agent-photo">
+            <!-- Replace with: <img src="images/agent.jpg" alt="Jane Doe, Client Relations & Event Specialist"> -->
+            <img src="https://i.pinimg.com/1200x/42/e2/ab/42e2ab5bec000a34a6800917b5cfa52c.jpg" alt="Aubrey Ocampo, Client Relations Specialist">
+          </div>
+          <h3 class="agent-name">Aubrey Ocampo</h3>
           <p class="agent-title">Client Relations &amp; Event Specialist</p>
+          <a href="#contact" class="btn btn-primary agent-cta">Message Aubrey</a>
+        </div>
+
+        <!-- RIGHT: Bio + highlights -->
+        <div class="agent-secondary">
           <p class="agent-bio">
-            (Short bio placeholder — years of experience, areas of expertise, and what
-            clients can expect when working with you. Keep it warm but professional.)
+            For the past year, I've had the joy of helping couples, families, and businesses
+            across DFW — and internationally — bring their events to life. From intimate
+            showers to full-scale celebrations, I handle the details so you can actually
+            enjoy your day. When you work with me, you get one point of contact, honest
+            timelines, and someone who treats your event like it's my own.
           </p>
+
           <ul class="agent-highlights">
+            <li><strong>Experience</strong><span>1 year · DFW &amp; international</span></li>
             <li><strong>Specialties</strong><span>Weddings · Corporate · Private Events</span></li>
-            <li><strong>Service Area</strong><span>Dallas–Fort Worth Metroplex</span></li>
             <li><strong>Response Time</strong><span>Within one business day</span></li>
           </ul>
-          <a href="#contact" class="btn btn-primary">Message Aubrey</a>
+
+          <div class="agent-results">
+            <div class="result-item">
+              <span class="result-num">100%</span>
+              <span class="result-label">On-time setups</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">1</span>
+              <span class="result-label">Point of contact</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">24h</span>
+              <span class="result-label">Reply window</span>
+            </div>
+          </div>
         </div>
-      </article>
+
+      </div>
     </div>
   </section>
 
@@ -428,22 +455,27 @@
         <p class="section-label">Our Story</p>
         <h2 class="section-title">About Us</h2>
         <p>
-          DFW Rentals &amp; Event Planning is a locally owned business serving Dallas,
-          Fort Worth, and surrounding communities. We combine quality rental inventory
-          with hands-on planning so your event runs smoothly from first call to final takedown.
+          DFW Rentals &amp; Event Planning is a boutique event company built on one simple
+          promise: every client gets a dedicated specialist who sees their event through
+          from first call to final takedown. In our first year of operation, we've delivered
+          rentals and planning support for weddings, corporate gatherings, and private
+          celebrations — with a track record of on-time setups, zero no-shows, and clients
+          who come back for their next event.
         </p>
-        <p><em>(Placeholder — add your story, years in business, and service area here.)</em></p>
+        <p>
+          Though we're based in the Dallas–Fort Worth metroplex, our reach extends
+          internationally. Whether you're planning locally or coordinating a destination
+          event abroad, we bring the same hands-on service, attention to detail, and
+          reliable delivery that our clients rely on.
+        </p>
+        <p>
+          What sets us apart isn't just what we rent — it's how we work. Clear communication,
+          honest timelines, and a single point of contact who knows your event inside and out.
+        </p>
       </div>
-      <ul class="about-facts">
-        <li><strong>Service Area</strong><span>Dallas–Fort Worth Metroplex</span></li>
-        <li><strong>Phone</strong><span>(000) 000-0000</span></li>
-        <li><strong>Email</strong><span>hello@YOUR-DOMAIN.com</span></li>
-        <li><strong>Hours</strong><span>Mon–Sat, 9am–6pm</span></li>
-      </ul>
-    </div>
   </section>
 
-  <!-- ===== CONTACT ===== -->
+    <!-- ===== CONTACT / MESSAGE US ===== -->
   <section class="section section-alt" id="contact">
     <div class="container contact-inner">
       <div>
@@ -452,32 +484,57 @@
         <p class="section-sub">
           Tell us about your event and we'll get back to you within one business day.
         </p>
+
+        <ul class="contact-mini">
+          <li><i class="contact-ico">✦</i> 24-hour response time</li>
+          <li><i class="contact-ico">✦</i> DFW metroplex &amp; worldwide</li>
+          <li><i class="contact-ico">✦</i> Free quotes, no obligation</li>
+        </ul>
       </div>
 
-      <form class="contact-form" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
-        <div class="form-row">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required placeholder="Your name">
-        </div>
-        <div class="form-row">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required placeholder="you@example.com">
-        </div>
-        <div class="form-row">
-          <label for="phone">Phone (optional)</label>
-          <input id="phone" name="phone" type="tel" placeholder="(000) 000-0000">
-        </div>
-        <div class="form-row">
-          <label for="event-date">Event Date (optional)</label>
-          <input id="event-date" name="event-date" type="date">
-        </div>
-        <div class="form-row">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required placeholder="Tell us about your event..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
-        <p class="form-note">We'll never share your info. Form handled by Formspree.</p>
-      </form>
+      <div class="contact-form-wrap">
+        <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+          <!-- Web3Forms access key — replace with your own -->
+          <input type="hidden" name="access_key" value="a6d3d3ac-2fee-4157-9906-4818e8f03d92">
+          <input type="hidden" name="subject" value="New event inquiry — DFW Rentals & Event Planning">
+          <input type="hidden" name="from_name" value="DFW Rentals & Event Planning Website">
+          <input type="hidden" name="replyto" value="email">
+
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your name">
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com">
+          </div>
+
+          <div class="form-row">
+            <label for="phone">Phone (optional)</label>
+            <input id="phone" name="phone" type="tel" placeholder="(000) 000-0000">
+          </div>
+
+          <div class="form-row">
+            <label for="event-date">Event Date (optional)</label>
+            <input id="event-date" name="event-date" type="date">
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your event — type, guest count, venue, and any services you're interested in..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+
+          <div id="formResult" class="form-result" role="status" aria-live="polite"></div>
+
+          <p class="form-note">
+            Prefer social? <a href="https://www.facebook.com/YOUR-PAGE-NAME" target="_blank" rel="noopener noreferrer">Message us on Facebook</a> instead.
+          </p>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -554,6 +611,76 @@ if (navToggle && navList) {
       navToggle.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
     });
+  });
+}
+
+/* ============================================================
+   CONTACT FORM — Web3Forms submission
+   ============================================================ */
+const contactForm = document.getElementById('contactForm');
+const formResult = document.getElementById('formResult');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+
+    submitBtn.innerHTML = 'Sending…';
+    submitBtn.disabled = true;
+    formResult.innerHTML = '';
+    formResult.className = 'form-result';
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        formResult.textContent = 'Thank you — your message is on its way. We\'ll reply within one business day.';
+        formResult.classList.add('is-success');
+        contactForm.reset();
+
+        // Light sparkle celebration
+        for (let i = 0; i < 10; i++) {
+          setTimeout(() => {
+            const s = document.createElement('div');
+            s.textContent = ['✦', '✧', '·'][Math.floor(Math.random() * 3)];
+            s.style.cssText = `
+              position: fixed; pointer-events: none; z-index: 99999;
+              color: #c9a55c; font-size: ${12 + Math.random() * 10}px;
+              left: ${window.innerWidth / 2 + (Math.random() - 0.5) * 260}px;
+              top: ${window.innerHeight / 2 + (Math.random() - 0.5) * 160}px;
+              transition: all 1.2s ease-out;
+            `;
+            document.body.appendChild(s);
+            requestAnimationFrame(() => {
+              s.style.transform = `translate(${(Math.random() - 0.5) * 160}px, -140px) scale(0)`;
+              s.style.opacity = '0';
+            });
+            setTimeout(() => s.remove(), 1300);
+          }, i * 70);
+        }
+      } else {
+        formResult.textContent = 'Something went wrong — please try again, or email us directly.';
+        formResult.classList.add('is-error');
+      }
+    } catch (error) {
+      formResult.textContent = 'Network error — please check your connection and try again.';
+      formResult.classList.add('is-error');
+    }
+
+    submitBtn.innerHTML = originalText;
+    submitBtn.disabled = false;
+
+    setTimeout(() => {
+      formResult.textContent = '';
+      formResult.className = 'form-result';
+    }, 8000);
   });
 }
   </script>
