@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fdfaf6"/>
+      <stop offset="100%" stop-color="#f4e3e1"/>
+    </linearGradient>
+    
+    <clipPath id="photoClip">
+      <rect x="480" y="0" width="720" height="630"/>
+    </clipPath>
+
+    <linearGradient id="fadeLeft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fdfaf6" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#fdfaf6" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="goldline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c9a55c" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#c9a55c"/>
+      <stop offset="100%" stop-color="#c9a55c" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- LOCAL IMAGE PATH -->
+  <image href="images/og-photo.jpg"
+         x="480" y="0" width="720" height="630"
+         preserveAspectRatio="xMaxYMid slice"
+         clip-path="url(#photoClip)"/>
+
+  <rect x="480" y="0" width="160" height="630" fill="url(#fadeLeft)"/>
+  <rect x="490" y="80" width="1.5" height="470" fill="#c9a55c" opacity="0.4"/>
+
+  <text x="80" y="180" font-family="Georgia, 'Times New Roman', serif"
+        font-size="18" letter-spacing="7" fill="#a9873f">DALLAS–FORT WORTH</text>
+
+  <rect x="80" y="205" width="180" height="1.5" fill="url(#goldline)"/>
+
+  <text x="80" y="300" font-family="Georgia, 'Times New Roman', serif"
+        font-size="72" font-weight="700" fill="#3b3634">DFW Rentals</text>
+  <text x="80" y="370" font-family="Georgia, 'Times New Roman', serif"
+        font-size="38" font-style="italic" fill="#a9873f">&amp; Event Planning</text>
+
+  <text x="80" y="435" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="20" font-weight="300" fill="#7a716c">
+    Wedding &amp; Party Rentals · Full Event Planning
+  </text>
+
+  <text x="80" y="545" font-family="Georgia, 'Times New Roman', serif"
+        font-size="16" letter-spacing="4" fill="#8a9a82">
+    ✦  https://matthew325-da.github.io/DFW-Rentals-Events/ ✦
+  </text>
+</svg>
