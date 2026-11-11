@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://matthew325-da.github.io/DFW-Rentals-Events/sitemap.xml
