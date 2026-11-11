@@ -922,3 +922,57 @@ img, video { max-width: 100%; height: auto; }
 @media (max-height: 500px) and (orientation: landscape) {
   .hero { padding: 60px 0 68px; }
 }
+
+/* ============================================================
+   HERO BLURRED 5-PHOTO COLLAGE BACKGROUND
+   ============================================================ */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate; /* keeps blurred layer contained */
+}
+
+.hero-collage {
+  position: absolute;
+  inset: -40px; /* extend past edges so blur doesn't show seams */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  z-index: 0;
+  opacity: 0.55;
+  filter: blur(14px) saturate(1.1);
+  transform: scale(1.06); /* zoom slightly so blur edges never show */
+  pointer-events: none;
+  background:
+  linear-gradient(180deg,
+    rgba(253, 250, 246, 0.7) 0%,
+    rgba(253, 250, 246, 0.5) 40%,
+    rgba(253, 250, 246, 0.9) 85%,
+    var(--ivory) 100%);
+}
+
+.collage-photo {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* placeholder gradient if image missing */
+  background-color: #e8dccb;
+}
+
+/* Soft wash overlay so text stays readable */
+.hero-collage-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg,
+      rgba(253, 250, 246, 0.75) 0%,
+      rgba(253, 250, 246, 0.55) 50%,
+      rgba(253, 250, 246, 0.85) 100%),
+    radial-gradient(circle at 50% 40%,
+      rgba(255,255,255,0.35),
+      transparent 70%);
+  backdrop-filter: blur(2px);
+}
+
+/* Keep hero content above the collage */
+.hero-inner { position: relative; z-index: 2; }
