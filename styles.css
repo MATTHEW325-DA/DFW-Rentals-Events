@@ -756,7 +756,169 @@ em { font-style: italic; color: var(--gold-deep); }
   letter-spacing: 0.3px;
 }
 
-/* Responsive */
-@media (max-width: 560px) {
-  .album-tab { padding: 10px 22px; font-size: 0.76rem; }
+/* ============================================================
+   MOBILE-FRIENDLY PASS
+   ============================================================ */
+
+/* Hamburger button — hidden on desktop */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 110;
+}
+.nav-toggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--charcoal);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.nav-toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.is-open span:nth-child(2) { opacity: 0; }
+.nav-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Prevent horizontal overflow everywhere */
+html, body { overflow-x: hidden; max-width: 100%; }
+img, video { max-width: 100%; height: auto; }
+
+/* iOS: stop input zoom by ensuring 16px font on mobile */
+@media (max-width: 760px) {
+  .form-row input,
+  .form-row textarea { font-size: 16px; }
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 900px) {
+  .container { padding: 0 22px; }
+  .section { padding: 76px 0; }
+
+  .agent-card { padding: 40px 36px; gap: 36px; }
+  .contact-inner, .about-inner { gap: 36px; }
+}
+
+/* ===== MOBILE (main breakpoint) ===== */
+@media (max-width: 760px) {
+  /* --- Nav: switch to hamburger --- */
+  .nav-toggle { display: flex; }
+  .nav-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(78vw, 320px);
+    background: var(--ivory);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 96px 32px 32px;
+    gap: 22px;
+    box-shadow: -12px 0 40px rgba(59, 54, 52, 0.12);
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    z-index: 105;
+  }
+  .nav-list.is-open { transform: translateX(0); }
+  .nav-list li { display: block !important; width: 100%; } /* override old rule */
+  .nav-list a {
+    font-size: 1rem;
+    display: block;
+    padding: 6px 0;
+  }
+  .nav-cta { display: inline-block !important; margin-top: 8px; }
+
+  /* --- Hero --- */
+  .hero { padding: 84px 0 92px; }
+  .hero-sub { font-size: 1rem; padding: 0 4px; }
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 12px; }
+  .hero-actions .btn { width: 100%; }
+
+  /* --- Grids: force single column --- */
+  .grid-3,
+  .grid-2,
+  .package-grid,
+  .extras-grid,
+  .album-grid,
+  .team-grid {
+    grid-template-columns: 1fr !important;
+    gap: 22px;
+  }
+
+  /* --- Section titles --- */
+  .section { padding: 64px 0; }
+  .section-title { font-size: 1.7rem; }
+  .section-sub { font-size: 0.95rem; margin-bottom: 36px; }
+
+  /* --- Cards --- */
+  .card { padding: 32px 24px; }
+  .package-card { padding: 40px 26px 32px; }
+  .package-price .price-now { font-size: 2rem; }
+  .extra-item { padding: 22px 22px; gap: 16px; }
+
+  /* --- Agent card --- */
+  .agent-card {
+    grid-template-columns: 1fr;
+    padding: 36px 26px;
+    gap: 26px;
+    text-align: center;
+  }
+  .agent-photo { width: 180px; height: 180px; }
+  .agent-highlights li {
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 14px 0;
+  }
+  .agent-info .btn { width: 100%; }
+
+  /* --- Album tabs --- */
+  .album-tabs { width: 100%; justify-content: center; }
+  .album-tab { padding: 10px 20px; font-size: 0.76rem; flex: 1; }
+  .album-video video { object-fit: contain; background: #000; }
+
+  /* --- About facts --- */
+  .about-facts { padding: 4px 20px; }
+  .about-facts li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding: 14px 0;
+  }
+
+  /* --- Contact form --- */
+  .contact-form { padding: 26px 22px; }
+  .contact-inner, .about-inner { grid-template-columns: 1fr; gap: 32px; }
+
+  /* --- Footer --- */
+  .site-footer { padding: 44px 0 28px; }
+
+  /* --- Floating FB button: safe area --- */
+  .fb-float {
+    width: 52px;
+    height: 52px;
+    bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+    right: 18px;
+  }
+}
+
+/* ===== VERY SMALL (iPhone SE, etc.) ===== */
+@media (max-width: 400px) {
+  .container { padding: 0 18px; }
+  .hero h1 { font-size: 1.9rem; }
+  .logo { font-size: 1.15rem; }
+  .package-price .price-now { font-size: 1.75rem; }
+  .price-was { font-size: 1.15rem; }
+  .album-tab { padding: 9px 14px; font-size: 0.7rem; }
+  .btn { padding: 13px 24px; font-size: 0.8rem; }
+  .team-photo { width: 120px; height: 120px; }
+}
+
+/* ===== Landscape phones ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero { padding: 60px 0 68px; }
 }
