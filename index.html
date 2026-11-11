@@ -246,42 +246,100 @@
     </div>
   </section>
 
-  <!-- ===== VIDEO SHOWCASE ===== -->
+    <!-- ===== ALBUM / GALLERY ===== -->
   <section class="section section-alt" id="gallery">
     <div class="container">
-      <p class="section-label">Gallery</p>
+      <p class="section-label">Our Album</p>
       <h2 class="section-title">Moments We've Created</h2>
-      <p class="section-sub">Replace these placeholders with your own event videos.</p>
+      <p class="section-sub">
+        A collection of celebrations, setups, and details from events across DFW.
+      </p>
 
-      <div class="grid grid-3 video-grid">
-        <!-- REPLACE each placeholder with a <video> block — see notes below -->
-        <div class="video-item" data-video="videos/event-1.mp4">
-          <span class="play-icon">▶</span>
-          <span class="video-label">Video 1</span>
-          
-        </video>
-        </div>
-        <div class="video-item" data-video="videos/event-2.mp4">
-          <span class="play-icon">▶</span>
-          <span class="video-label">Video 2</span>
-        </div>
-        <div class="video-item" data-video="videos/event-3.mp4">
-          <span class="play-icon">▶</span>
-          <span class="video-label">Video 3</span>
-        </div>
-        <div class="video-item" data-video="videos/event-4.mp4">
-          <span class="play-icon">▶</span>
-          <span class="video-label">Video 4</span>
-        </div>
-        <div class="video-item" data-video="videos/event-5.mp4">
-          <span class="play-icon">▶</span>
-          <span class="video-label">Video 5</span>
-        </div>
-        <div class="video-item" data-video="videos/event-6.mp4">
-          <span class="play-icon">▶</span>
-          <span class="video-label">Video 6</span>
+      <!-- Sub-tabs -->
+      <div class="album-tabs" role="tablist">
+        <button class="album-tab is-active" data-tab="photos" role="tab" aria-selected="true">Photos</button>
+        <button class="album-tab" data-tab="videos" role="tab" aria-selected="false">Videos</button>
+      </div>
+
+      <!-- ===== PHOTOS PANEL ===== -->
+      <div class="album-panel is-active" id="panel-photos" role="tabpanel">
+        <div class="grid grid-3 album-grid">
+
+          <!-- PHOTO 1 -->
+          <figure class="album-photo">
+            <!-- Replace placeholder with:
+                 <img src="images/photo-1.jpg" alt="Table setting at a DFW wedding reception"> -->
+            <img src="images/photo-1.jfif" alt="Table setting at a DFW wedding reception">
+            <figcaption>Elegant table styling</figcaption>
+          </figure>
+
+          <!-- PHOTO 2 -->
+          <figure class="album-photo">
+            <img src="images/photo-2.jfif" alt="Table setting at a DFW wedding reception">
+            <figcaption>Reception decor</figcaption>
+          </figure>
+
+          <!-- PHOTO 3 -->
+          <figure class="album-photo">
+            <img src="images/photo-3.jfif" alt="Table setting at a DFW wedding reception">
+            <figcaption>Outdoor food setup</figcaption>
+          </figure>
+
+          <!-- PHOTO 4 -->
+          <figure class="album-photo">
+            <img src="images/photo-4.jfif" alt="Table setting at a DFW wedding reception">
+            <figcaption>Tent &amp; lighting</figcaption>
+          </figure>
+
+          <!-- PHOTO 5 -->
+          <figure class="album-photo">
+            <img src="images/photo-5.jfif" alt="Table setting at a DFW wedding reception">
+            <figcaption>Centerpiece details</figcaption>
+          </figure>
+
+          <!-- PHOTO 6 -->
+          <figure class="album-photo">
+            <img src="images/photo-6.jfif" alt="Table setting at a DFW wedding reception">
+            <figcaption>Celebration moment</figcaption>
+          </figure>
+
         </div>
       </div>
+
+      <!-- ===== VIDEOS PANEL ===== -->
+      <div class="album-panel" id="panel-videos" role="tabpanel">
+        <div class="grid grid-3 album-grid">
+
+          <!-- VIDEO 1 -->
+          <div class="album-video">
+            <video controls playsinline preload="metadata" poster="videos/event-1-poster.jpg">
+              <source src="videos/event-1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="album-video-caption">Wedding highlight reel</p>
+          </div>
+
+          <!-- VIDEO 2 -->
+          <div class="album-video">
+            <video controls playsinline preload="metadata" poster="videos/event-2-poster.jpg">
+              <source src="videos/event-2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="album-video-caption">Corporate gala setup</p>
+          </div>
+
+          <!-- VIDEO 3 -->
+          <div class="album-video">
+            <video controls playsinline preload="metadata" poster="videos/event-3-poster.jpg">
+              <source src="videos/event-3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="album-video-caption">Outdoor ceremony walkthrough</p>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -380,9 +438,16 @@
   <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p class="footer-brand">DFW Rentals &amp; Event Planning</p>
-      <p>Serving Dallas, Fort Worth &amp; surrounding areas</p>
-      <p>
+      <p class="footer-contact">
+      </p>
+      <p class="footer-social">
+        <a href="https://www.facebook.com/YOUR-PAGE-NAME" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.9h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/>
+          </svg>
+          <span>Follow us on Facebook</span>
+        </a>
+      </p>
         <a href="tel:+10000000000">(000) 000-0000</a> ·
         <a href="mailto:hello@YOUR-DOMAIN.com">hello@YOUR-DOMAIN.com</a>
       </p>
@@ -405,6 +470,23 @@
           </video>`;
       });
     });
+
+    // Album tabs — switch between Photos and Videos
+document.querySelectorAll('.album-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = tab.dataset.tab;
+
+    document.querySelectorAll('.album-tab').forEach(t => {
+      t.classList.remove('is-active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    tab.classList.add('is-active');
+    tab.setAttribute('aria-selected', 'true');
+
+    document.querySelectorAll('.album-panel').forEach(p => p.classList.remove('is-active'));
+    document.getElementById('panel-' + target).classList.add('is-active');
+  });
+});
   </script>
 </body>
 </html>
