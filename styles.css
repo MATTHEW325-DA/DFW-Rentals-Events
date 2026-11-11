@@ -804,6 +804,21 @@ img, video { max-width: 100%; height: auto; }
 
 /* ===== MOBILE (main breakpoint) ===== */
 @media (max-width: 760px) {
+  .hero-collage {
+    filter: blur(1.5px) saturate(1.05);
+    opacity: 0.9;
+  }
+  .hero-collage-overlay {
+    background:
+      linear-gradient(180deg,
+        rgba(253, 250, 246, 0.55) 0%,
+        rgba(253, 250, 246, 0.4) 50%,
+        rgba(253, 250, 246, 0.7) 90%,
+        var(--ivory) 100%);
+  }
+  /* Slightly slower on mobile so it feels calmer */
+  .collage-photo { animation-duration: 34s; }
+
   /* --- Nav: switch to hamburger --- */
   .nav-toggle { display: flex; }
   .nav-list {
@@ -924,55 +939,65 @@ img, video { max-width: 100%; height: auto; }
 }
 
 /* ============================================================
-   HERO BLURRED 5-PHOTO COLLAGE BACKGROUND
+   HERO 5-PHOTO LIGHT-BLUR COLLAGE BACKGROUND (with motion)
    ============================================================ */
 
 .hero {
   position: relative;
   overflow: hidden;
-  isolation: isolate; /* keeps blurred layer contained */
+  isolation: isolate;
 }
 
 .hero-collage {
   position: absolute;
-  inset: -40px; /* extend past edges so blur doesn't show seams */
+  inset: -20px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   z-index: 0;
-  opacity: 0.55;
-  filter: blur(14px) saturate(1.1);
-  transform: scale(1.06); /* zoom slightly so blur edges never show */
+  opacity: 0.95;
+  filter: blur(1px) saturate(1.08) brightness(1.02);
+  transform: scale(1.04);
   pointer-events: none;
-  background:
-  linear-gradient(180deg,
-    rgba(253, 250, 246, 0.7) 0%,
-    rgba(253, 250, 246, 0.5) 40%,
-    rgba(253, 250, 246, 0.9) 85%,
-    var(--ivory) 100%);
 }
 
 .collage-photo {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* placeholder gradient if image missing */
   background-color: #e8dccb;
+  /* Ken Burns base */
+  will-change: transform;
+  animation: kenburns 28s ease-in-out infinite alternate;
 }
 
-/* Soft wash overlay so text stays readable */
+/* Each tile drifts differently so it feels organic */
+.collage-photo:nth-child(1) { animation-duration: 26s; animation-delay: 0s; }
+.collage-photo:nth-child(2) { animation-duration: 32s; animation-delay: -4s; }
+.collage-photo:nth-child(3) { animation-duration: 24s; animation-delay: -8s; }
+.collage-photo:nth-child(4) { animation-duration: 30s; animation-delay: -12s; }
+.collage-photo:nth-child(5) { animation-duration: 28s; animation-delay: -16s; }
+
+@keyframes kenburns {
+  0%   { transform: scale(1)    translate(0, 0); }
+  50%  { transform: scale(1.06) translate(-1%, 1%); }
+  100% { transform: scale(1.1)  translate(1%, -1%); }
+}
+
+/* Very light wash — photos clearly visible, text still readable */
 .hero-collage-overlay {
   position: absolute;
   inset: 0;
   background:
     linear-gradient(180deg,
-      rgba(253, 250, 246, 0.75) 0%,
-      rgba(253, 250, 246, 0.55) 50%,
-      rgba(253, 250, 246, 0.85) 100%),
-    radial-gradient(circle at 50% 40%,
-      rgba(255,255,255,0.35),
-      transparent 70%);
-  backdrop-filter: blur(2px);
+      rgba(253, 250, 246, 0.45) 0%,
+      rgba(253, 250, 246, 0.25) 45%,
+      rgba(253, 250, 246, 0.6) 90%,
+      var(--ivory) 100%);
 }
 
-/* Keep hero content above the collage */
 .hero-inner { position: relative; z-index: 2; }
+
+@media (prefers-reduced-motion: reduce) {
+  .collage-photo { animation: none; }
+  .hero-collage { filter: blur(1px) saturate(1.08); }
+}
