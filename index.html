@@ -519,6 +519,29 @@ document.querySelectorAll('.album-tab').forEach(tab => {
     document.getElementById('panel-' + target).classList.add('is-active');
   });
 });
+
+// Hamburger menu toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navList = document.querySelector('.nav-list');
+
+if (navToggle && navList) {
+  navToggle.addEventListener('click', () => {
+    const open = navList.classList.toggle('is-open');
+    navToggle.classList.toggle('is-open', open);
+    navToggle.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  // Close menu when a link is clicked
+  navList.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navList.classList.remove('is-open');
+      navToggle.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+}
   </script>
 </body>
 </html>
