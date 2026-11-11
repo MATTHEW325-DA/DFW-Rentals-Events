@@ -804,21 +804,6 @@ img, video { max-width: 100%; height: auto; }
 
 /* ===== MOBILE (main breakpoint) ===== */
 @media (max-width: 760px) {
-  .hero-collage {
-    filter: blur(1.5px) saturate(1.05);
-    opacity: 0.9;
-  }
-  .hero-collage-overlay {
-    background:
-      linear-gradient(180deg,
-        rgba(253, 250, 246, 0.55) 0%,
-        rgba(253, 250, 246, 0.4) 50%,
-        rgba(253, 250, 246, 0.7) 90%,
-        var(--ivory) 100%);
-  }
-  /* Slightly slower on mobile so it feels calmer */
-  .collage-photo { animation-duration: 34s; }
-
   /* --- Nav: switch to hamburger --- */
   .nav-toggle { display: flex; }
   .nav-list {
@@ -997,7 +982,3 @@ img, video { max-width: 100%; height: auto; }
 
 .hero-inner { position: relative; z-index: 2; }
 
-@media (prefers-reduced-motion: reduce) {
-  .collage-photo { animation: none; }
-  .hero-collage { filter: blur(1px) saturate(1.08); }
-}
